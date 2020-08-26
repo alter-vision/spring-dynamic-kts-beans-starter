@@ -77,16 +77,17 @@
         <repository>
           <id>github</id>
           <name>alter-vision-registry</name>
-          <url>https://maven.pkg.github.com/alter-vision</url>
+          <url>https://maven.pkg.github.com/alter-vision/spring-dynamic-kts-beans-starter</url>
         </repository>         
     </repositories>
     <distributionManagement>
         <repository>
           <id>github</id>
           <name>alter-vision-registry</name>
-          <url>https://maven.pkg.github.com/alter-vision</url>
+          <url>https://maven.pkg.github.com/alter-vision/spring-dynamic-kts-beans-starter</url>
         </repository>   
     </distributionManagement>
+
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
