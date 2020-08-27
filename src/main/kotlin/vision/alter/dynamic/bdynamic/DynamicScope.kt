@@ -1,4 +1,4 @@
-package vision.alter.dynamic.serverless
+package vision.alter.dynamic.bdynamic
 
 import org.springframework.beans.factory.ObjectFactory
 import org.springframework.beans.factory.config.Scope

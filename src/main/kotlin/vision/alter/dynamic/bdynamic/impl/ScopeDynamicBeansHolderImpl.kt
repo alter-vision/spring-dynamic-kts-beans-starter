@@ -1,7 +1,7 @@
-package vision.alter.dynamic.serverless.impl
+package vision.alter.dynamic.bdynamic.impl
 
 import org.springframework.stereotype.Component
-import vision.alter.dynamic.serverless.ScopeObjectsHolder
+import vision.alter.dynamic.bdynamic.ScopeObjectsHolder
 
 @Component
 class ScopeDynamicBeansHolderImpl : ScopeObjectsHolder {

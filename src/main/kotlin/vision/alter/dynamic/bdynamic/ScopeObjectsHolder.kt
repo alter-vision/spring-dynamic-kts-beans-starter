@@ -1,4 +1,4 @@
-package vision.alter.dynamic.serverless
+package vision.alter.dynamic.bdynamic
 
 interface ScopeObjectsHolder : ScopeDynamicBeansProvider {
     fun addBean(name: String, bean: Any): Any

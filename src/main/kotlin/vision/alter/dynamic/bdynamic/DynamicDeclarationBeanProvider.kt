@@ -1,4 +1,4 @@
-package vision.alter.dynamic.serverless
+package vision.alter.dynamic.bdynamic
 
 interface DynamicDeclarationBeanProvider {
     fun declareBeans(version: String, scriptsData: List<String>) = scriptsData.forEach { declareBeans(version, it) }

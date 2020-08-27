@@ -1,9 +1,9 @@
-package vision.alter.dynamic.serverless.impl
+package vision.alter.dynamic.bdynamic.impl
 
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
 import org.springframework.stereotype.Component
-import vision.alter.dynamic.serverless.DynamicScope
+import vision.alter.dynamic.bdynamic.DynamicScope
 
 @Component
 class DynamicScopeBeanFactoryPostProcessor : BeanFactoryPostProcessor {

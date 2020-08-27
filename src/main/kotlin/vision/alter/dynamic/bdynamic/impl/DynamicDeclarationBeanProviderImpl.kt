@@ -1,10 +1,10 @@
-package vision.alter.dynamic.serverless.impl
+package vision.alter.dynamic.bdynamic.impl
 
 import mu.KLogging
 
 import org.jetbrains.kotlin.cli.common.repl.KotlinJsr223JvmScriptEngineBase
 import org.jetbrains.kotlin.script.jsr223.KotlinJsr223JvmLocalScriptEngine
-import vision.alter.dynamic.serverless.DynamicDeclarationBeanProvider
+import vision.alter.dynamic.bdynamic.DynamicDeclarationBeanProvider
 
 class DynamicDeclarationBeanProviderImpl(
     private val scriptEngine: KotlinJsr223JvmLocalScriptEngine,

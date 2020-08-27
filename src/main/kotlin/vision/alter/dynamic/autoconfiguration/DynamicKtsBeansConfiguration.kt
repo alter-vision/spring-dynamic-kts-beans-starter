@@ -7,11 +7,11 @@ import org.springframework.context.ConfigurableApplicationContext
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
-import vision.alter.dynamic.serverless.DynamicBeanDefinition
-import vision.alter.dynamic.serverless.DynamicDeclarationBeanProvider
-import vision.alter.dynamic.serverless.DynamicScope
-import vision.alter.dynamic.serverless.impl.DynamicDeclarationBeanProviderImpl
-import vision.alter.dynamic.serverless.impl.DynamicKtsClassLoader
+import vision.alter.dynamic.bdynamic.DynamicBeanDefinition
+import vision.alter.dynamic.bdynamic.DynamicDeclarationBeanProvider
+import vision.alter.dynamic.bdynamic.DynamicScope
+import vision.alter.dynamic.bdynamic.impl.DynamicDeclarationBeanProviderImpl
+import vision.alter.dynamic.bdynamic.impl.DynamicKtsClassLoader
 import javax.script.ScriptEngineManager
 
 

@@ -1,4 +1,4 @@
-package vision.alter.dynamic.serverless.impl
+package vision.alter.dynamic.bdynamic.impl
 
 
 class DynamicKtsClassLoader : ClassLoader(), DynamicLoader {
