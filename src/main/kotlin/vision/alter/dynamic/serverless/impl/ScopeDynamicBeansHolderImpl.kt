@@ -1,10 +1,10 @@
-package ru.rshb.intech.umqa.service.serverless.impl
+package vision.alter.dynamic.serverless.impl
 
 import org.springframework.stereotype.Component
 import vision.alter.dynamic.serverless.ScopeObjectsHolder
 
 @Component
-class ScopeDynamicBeansHolderImpl: ScopeObjectsHolder {
+class ScopeDynamicBeansHolderImpl : ScopeObjectsHolder {
 
 
     private val beans = mutableMapOf<String, Any>()
@@ -17,6 +17,8 @@ class ScopeDynamicBeansHolderImpl: ScopeObjectsHolder {
         return bean
     }
 
-    override fun removeBean(name: String) { beans.remove(name) }
+    override fun removeBean(name: String) {
+        beans.remove(name)
+    }
 
 }

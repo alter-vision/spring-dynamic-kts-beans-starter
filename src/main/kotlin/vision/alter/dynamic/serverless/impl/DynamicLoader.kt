@@ -1,4 +1,4 @@
-package ru.rshb.intech.umqa.service.serverless.impl
+package vision.alter.dynamic.serverless.impl
 
 interface DynamicLoader {
     fun defineClassFromByteCode(classData: ByteArray, path: String): Class<*>

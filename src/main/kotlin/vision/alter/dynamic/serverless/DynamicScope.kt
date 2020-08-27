@@ -2,7 +2,6 @@ package vision.alter.dynamic.serverless
 
 import org.springframework.beans.factory.ObjectFactory
 import org.springframework.beans.factory.config.Scope
-import vision.alter.dynamic.serverless.ScopeObjectsHolder
 
 
 class DynamicScope(

@@ -4,7 +4,6 @@ import mu.KLogging
 
 import org.jetbrains.kotlin.cli.common.repl.KotlinJsr223JvmScriptEngineBase
 import org.jetbrains.kotlin.script.jsr223.KotlinJsr223JvmLocalScriptEngine
-import ru.rshb.intech.umqa.service.serverless.impl.DynamicKtsClassLoader
 import vision.alter.dynamic.serverless.DynamicDeclarationBeanProvider
 
 class DynamicDeclarationBeanProviderImpl(
@@ -24,7 +23,7 @@ class DynamicDeclarationBeanProviderImpl(
             )
             if (!clz.isInterface) {
                 val name = clz.name.split("$").last()
-                registerBean("${name[0].toLowerCase()}${name.substring(1)}", clz, version , it.path, it.bytes)
+                registerBean("${name[0].toLowerCase()}${name.substring(1)}", clz, version, it.path, it.bytes)
             }
             clz
         }
@@ -36,5 +35,5 @@ class DynamicDeclarationBeanProviderImpl(
         initializeBean(bean, name)
     }
 
-    companion object: KLogging()
+    companion object : KLogging()
 }
