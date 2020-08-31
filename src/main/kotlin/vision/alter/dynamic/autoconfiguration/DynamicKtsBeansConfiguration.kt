@@ -16,7 +16,6 @@ import javax.script.ScriptEngineManager
 
 
 @Configuration
-@EnableAutoConfiguration
 @ComponentScan("vision.alter.dynamic")
 class DynamicKtsBeansConfiguration {
 
