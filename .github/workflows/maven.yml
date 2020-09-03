@@ -31,4 +31,6 @@ jobs:
       with:
         java-version: 11
     - name: deploy package
-      run: mvn deploy --file pom.xml -Dregistry=https://maven.pkg.github.com/alter-vision -Dtoken=GH_TOKEN
+      run: mvn deploy --file pom.xml
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
