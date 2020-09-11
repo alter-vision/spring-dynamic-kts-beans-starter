@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn -DartifactVersion=$GITHUB_REF -B package --file pom.xml
+      run: mvn -DartifactVersion=${GITHUB_REF##*/} -B package --file pom.xml
   
   deploy:
     runs-on: ubuntu-latest
@@ -29,6 +29,6 @@ jobs:
       with:
         java-version: 11
     - name: deploy package
-      run: mvn -DartifactVersion=$GITHUB_REF deploy --file pom.xml
+      run: mvn -DartifactVersion=${GITHUB_REF##*/} deploy --file pom.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
