@@ -31,5 +31,5 @@ jobs:
     - name: deploy package
       run: mvn deploy --file pom.xml
       env:
-        ARTIFACT_VERSION: ${{ GITHUB_REF }}
+        ARTIFACT_VERSION: $GITHUB_REF
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
