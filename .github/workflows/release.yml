@@ -3,8 +3,7 @@
 name: Publich release
 
 on:
-  release:
-    types: [published]
+  release
 
 jobs:
   build:
