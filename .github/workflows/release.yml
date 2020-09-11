@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Publich release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Check Copyright
+        uses: qcastel/github-actions-maven-cmd@master
+        with:
+          maven-args: "license:check"
+
+      - name: Build and Test
+        uses: qcastel/github-actions-maven-cmd@master
+        with:
+          maven-args: "clean install"
+
+      - name: Release
+        uses: qcastel/github-actions-maven-release@master
+        with:
+          release-branch-name: "master"
+
+          git-release-bot-name: "alter-vision"
+          git-release-bot-email: "alter-vision@github.com"
+
+          access-token: ${{ secrets.GITHUB_TOKEN }}
