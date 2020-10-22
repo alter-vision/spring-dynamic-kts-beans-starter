@@ -2,7 +2,6 @@ package vision.alter.dynamic.autoconfiguration
 
 import org.jetbrains.kotlin.script.jsr223.KotlinJsr223JvmLocalScriptEngine
 import org.springframework.beans.factory.support.BeanDefinitionRegistry
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.ConfigurableApplicationContext
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
@@ -21,7 +20,6 @@ class DynamicKtsBeansConfiguration {
 
     fun scriptEngine(ctx: ConfigurableApplicationContext): KotlinJsr223JvmLocalScriptEngine =
         ScriptEngineManager(ctx.classLoader).getEngineByExtension("kts") as KotlinJsr223JvmLocalScriptEngine
-
 
     @Bean
     fun dynamicDeclarationBeanProvider(
@@ -48,11 +46,18 @@ class DynamicKtsBeansConfiguration {
                     }
                 )
             },
-            initializeBean
-        ) { clz -> context.getBean(clz) }
+            initializeBean,
+            { clz, name ->
+                when (name) {
+                    null -> context.getBean(clz)
+                    else -> context.getBean(name, clz)
+                }
+            }
+        )
 
     @Bean
     fun initializeBean(context: ConfigurableApplicationContext): (Any, String) -> Any = { bean, name ->
         context.autowireCapableBeanFactory.initializeBean(bean, name)
     }
+
 }
